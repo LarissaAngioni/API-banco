@@ -4,6 +4,25 @@
 Esta API permite a gestão de contas bancárias, incluindo a criação de contas, transações, atualização de dados, exclusão de contas, consulta de saldo e emissão de extratos. 
 
 
+# Índice 
+
+* [Funcionalidades](#Funcionalidades)
+* [Tecnologias](#Tecnologias)
+* [Programas necessários](#Programas-necessários)
+* [Status do Projeto](#status-do-Projeto)
+* [Documentação da API](#Documentação-da-API)
+    * [Lista todas as contas bancárias existentes](#Lista-todas-as-contas-bancárias-existentes)
+    * [Cria uma conta bancária](#Cria-uma-conta-bancária)
+    * [Atualizar usuário da conta bancária](#Atualizar-usuário-da-conta-bancária)
+    * [Excluir uma conta bancária](#Excluir-uma-conta-bancária)
+    * [Depositar em uma conta bancária](#Depositar-em-uma-conta-bancária)
+    * [Sacar de uma conta bancária](#Sacar-de-uma-conta-bancária)
+    * [Transferir valores entre contas bancárias](#Transferir-valores-entre-contas-bancárias)
+    * [Consultar saldo da conta bancária](#Consultar-saldo-da-conta-bancária)
+    * [Emitir extrato bancário](#Emitir-extrato-bancário)
+* [Rodando localmente](#aRodando-localmente)
+
+
 ## Funcionalidades
 
 - Criar conta bancária
@@ -17,16 +36,17 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 - Emitir extrato bancário
 
 
-##
+## Tecnologias
 
+* Javascript
+* Node
+* Express
 
+## Programas necessários
+* NodeJs
+# Documentação da API
 
-Javascript, Node, Express
-
-
-## Documentação da API
-
-#### Lista todas as contas bancárias existentes
+### Lista todas as contas bancárias existentes
 
 ```http
   GET /contas?senha_banco=Cubos123Bank
@@ -36,22 +56,31 @@ Javascript, Node, Express
 | :---------- | :--------- | :---------------------------------- |
 | `senha` | `string` | Senha do Banco |
 
-#### Cria uma conta bancária
+| Request  | Response   |
+| :---------- | :--------- | 
+| ![Screenshot](https://i.imgur.com/mp9cuas.png?1) | ![Screenshot](https://i.imgur.com/HFe99DU.png?1) |
+
+
+### Cria uma conta bancária
 
 ```http
   POST /contas
 ```
-| Body   | Tipo       | Descrição                                   |
+| JSON   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `nome`      | `json` | **Obrigatório**|
-| `cpf`      | `json` | **Obrigatório** cpf válido|
-| `data_nascimento`      | `json` | **Obrigatório**|
-| `telefone`      | `json` | **Obrigatório**|
-| `email`      | `json` | **Obrigatório** email válido|
-| `senha`      | `json` | **Obrigatório**|
+| `nome`      | `string` | **Obrigatório**|
+| `cpf`      | `number` | **Obrigatório** cpf válido|
+| `data_nascimento`      | `number` | **Obrigatório**|
+| `telefone`      | `number` | **Obrigatório**|
+| `email`      | `string` | **Obrigatório** email válido|
+| `senha`      | `string` | **Obrigatório**|
+
+| Request  | Response   |
+| :---------- | :--------- | 
+| ![Screenshot](https://i.imgur.com/xka3fog.png) | ![Screenshot](https://i.imgur.com/VHTkuyY.png) |
 
 
-#### Atualizar usuário da conta bancária
+### Atualizar usuário da conta bancária
 
 ```http
   PUT /contas/:numeroConta/usuario
@@ -61,16 +90,21 @@ Javascript, Node, Express
 | `:numeroConta` | `number` | **Obrigatório** id da conta |
 
 
-| Body   | Tipo       | Descrição                                   |
+| JSON   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `nome`      | `json` | **Opcional**|
-| `cpf`      | `json` | **Opcional**|
-| `data_nascimento`      | `json` | **Opcional**|
-| `telefone`      | `json` | **Opcional**|
-| `email`      | `json` | **Opcional**|
-| `senha`      | `json` | **Opcional**|
+| `nome`      | `string` | **Opcional**|
+| `cpf`      | `number` | **Opcional**|
+| `data_nascimento`      | `number` | **Opcional**|
+| `telefone`      | `number` | **Opcional**|
+| `email`      | `string` | **Opcional**|
+| `senha`      | `string` | **Opcional**|
 
-#### Excluir uma conta bancária
+| Request  | Response   |
+| :---------- | :--------- | 
+| ![Screenshot](https://i.imgur.com/yu0E3p5.png) | ![Screenshot](https://i.imgur.com/uijaNYa.png) |
+
+
+### Excluir uma conta bancária
 
 ```http
   DELETE /contas/:numeroConta
@@ -79,44 +113,63 @@ Javascript, Node, Express
 | :---------- | :--------- | :---------------------------------- |
 | `:numeroConta` | `number` | **Obrigatório** id da conta |
 
+| Request  | Response   |
+| :---------- | :--------- | 
+| ![Screenshot](https://i.imgur.com/evzG9Qd.png) | ![Screenshot](https://i.imgur.com/HBhS9OQ.png) |
 
-#### Depositar em uma conta bancária
+
+### Depositar em uma conta bancária
 
 ```http
   POST /transacoes/depositar
 ```
 
-| Body   | Tipo       | Descrição                                   |
+| JSON   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `numero_conta`      | `json` | **Obrigatório** id da conta|
-| `valor`      | `json`  | **Obrigatório** valor a ser depositado|
+| `numero_conta`      | `number` | **Obrigatório** id da conta|
+| `valor`      | `number`  | **Obrigatório** valor a ser depositado|
 
-#### Sacar de uma conta bancária
+| Request  | Response   |
+| :---------- | :--------- | 
+| ![Screenshot](https://i.imgur.com/Lbrm9oO.png) | ![Screenshot](https://i.imgur.com/ny6LVyK.png) |
+
+
+### Sacar de uma conta bancária
 
 ```http
   POST /transacoes/sacar
 ```
 
-| Body   | Tipo       | Descrição                                   |
+| JSON   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `numero_conta`      | `json` | **Obrigatório** id da conta|
-| `valor`      | `json`  | **Obrigatório** valor a ser sacado|
-| `senha`      | `json`  | **Obrigatório** senha da conta|
+| `numero_conta`      | `number` | **Obrigatório** id da conta|
+| `valor`      | `number`  | **Obrigatório** valor a ser sacado|
+| `senha`      | `string`  | **Obrigatório** senha da conta|
 
-#### Transferir valores entre contas bancárias
+| Request  | Response   |
+| :---------- | :--------- | 
+| ![Screenshot](https://i.imgur.com/EmtT2ua.png) | ![Screenshot](https://i.imgur.com/j9iZ8fM.png) |
+
+
+### Transferir valores entre contas bancárias
 
 ```http
   POST /transacoes/transferir
 ```
 
-| Body   | Tipo       | Descrição                                   |
+| JSON   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `numero_conta_origem`      | `json` | **Obrigatório** id da conta de origem|
-| `numero_conta_destino`      | `json` | **Obrigatório** id da conta de destino|
-| `valor`      | `json`  | **Obrigatório** valor a ser sacado|
-| `senha`      | `json`  | **Obrigatório** senha da conta de origem|
+| `numero_conta_origem`      | `number` | **Obrigatório** id da conta de origem|
+| `numero_conta_destino`      | `number` | **Obrigatório** id da conta de destino|
+| `valor`      | `number`  | **Obrigatório** valor a ser sacado|
+| `senha`      | `string`  | **Obrigatório** senha da conta de origem|
 
-#### Consultar saldo da conta bancária
+| Request  | Response   |
+| :---------- | :--------- | 
+| ![Screenshot](https://i.imgur.com/5W3vXYM.png) | ![Screenshot](https://i.imgur.com/8NNC5Ix.png) |
+
+
+### Consultar saldo da conta bancária
 
 ```http
   GET /contas/saldo?numero_conta=123&senha=123
@@ -125,9 +178,13 @@ Javascript, Node, Express
 | Parâmetro   | Tipo       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
 | `numeroConta` | `number` | **Obrigatório** id da conta |
-| `senha` | `number` | **Obrigatório** senha da conta |
+| `senha` | `string` | **Obrigatório** senha da conta |
 
-#### Emitir extrato bancário
+| Request  | Response   |
+| :---------- | :--------- | 
+| ![Screenshot](https://i.imgur.com/tKIffsk.png) | ![Screenshot](https://i.imgur.com/4RoqG2Q.png) |
+
+### Emitir extrato bancário
 
 ```http
   GET /contas/extrato?numero_conta=123&senha=123
@@ -136,8 +193,11 @@ Javascript, Node, Express
 | Parâmetro   | Tipo       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
 | `numeroConta` | `number` | **Obrigatório** id da conta |
-| `senha` | `number` | **Obrigatório** senha da conta |
+| `senha` | `string` | **Obrigatório** senha da conta |
 
+| Request  | Response   |
+| :---------- | :--------- | 
+| ![Screenshot](https://i.imgur.com/wdrv5M7.png) | ![Screenshot](https://i.imgur.com/eTOiMjz.png) |
 
 ## Rodando localmente
 
