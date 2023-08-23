@@ -7,8 +7,8 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 ## 🔍 Índice 
 
 * [Funcionalidades](#-Funcionalidades)
-* [Tecnologias](#-Tecnologias)
-* [Programas necessários](#-Programas-necessários)
+* [Tecnologias](#%EF%B8%8F-tecnologias)
+* [Programas necessários](#%EF%B8%8F-programas-necessários)
 * [Documentação da API](#-Documentação-da-API)
     * [Lista todas as contas bancárias existentes](#Lista-todas-as-contas-bancárias-existentes)
     * [Cria uma conta bancária](#Cria-uma-conta-bancária)
@@ -19,7 +19,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
     * [Transferir valores entre contas bancárias](#Transferir-valores-entre-contas-bancárias)
     * [Consultar saldo da conta bancária](#Consultar-saldo-da-conta-bancária)
     * [Emitir extrato bancário](#Emitir-extrato-bancário)
-* [Rodando localmente](#-Rodando-localmente)
+* [Rodando localmente](#%EF%B8%8F-rodando-localmente)
 
 
 ## 💡 Funcionalidades
