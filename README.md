@@ -46,7 +46,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 * NodeJs
 # 📃 Documentação da API
 
-### Lista todas as contas bancárias existentes
+## Lista todas as contas bancárias existentes
 
 ```http
   GET /contas?senha_banco=Cubos123Bank
@@ -61,7 +61,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | ![Screenshot](https://i.imgur.com/mp9cuas.png?1) | ![Screenshot](https://i.imgur.com/HFe99DU.png?1) |
 
 
-### Cria uma conta bancária
+## Cria uma conta bancária
 
 ```http
   POST /contas
@@ -80,7 +80,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | ![Screenshot](https://i.imgur.com/xka3fog.png) | ![Screenshot](https://i.imgur.com/VHTkuyY.png) |
 
 
-### Atualizar usuário da conta bancária
+## Atualizar usuário da conta bancária
 
 ```http
   PUT /contas/:numeroConta/usuario
@@ -104,7 +104,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | ![Screenshot](https://i.imgur.com/yu0E3p5.png) | ![Screenshot](https://i.imgur.com/uijaNYa.png) |
 
 
-### Excluir uma conta bancária
+## Excluir uma conta bancária
 
 ```http
   DELETE /contas/:numeroConta
@@ -118,7 +118,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | ![Screenshot](https://i.imgur.com/evzG9Qd.png) | ![Screenshot](https://i.imgur.com/HBhS9OQ.png) |
 
 
-### Depositar em uma conta bancária
+## Depositar em uma conta bancária
 
 ```http
   POST /transacoes/depositar
@@ -134,7 +134,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | ![Screenshot](https://i.imgur.com/Lbrm9oO.png) | ![Screenshot](https://i.imgur.com/ny6LVyK.png) |
 
 
-### Sacar de uma conta bancária
+## Sacar de uma conta bancária
 
 ```http
   POST /transacoes/sacar
@@ -151,7 +151,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | ![Screenshot](https://i.imgur.com/EmtT2ua.png) | ![Screenshot](https://i.imgur.com/j9iZ8fM.png) |
 
 
-### Transferir valores entre contas bancárias
+## Transferir valores entre contas bancárias
 
 ```http
   POST /transacoes/transferir
@@ -169,7 +169,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | ![Screenshot](https://i.imgur.com/5W3vXYM.png) | ![Screenshot](https://i.imgur.com/8NNC5Ix.png) |
 
 
-### Consultar saldo da conta bancária
+## Consultar saldo da conta bancária
 
 ```http
   GET /contas/saldo?numero_conta=123&senha=123
@@ -184,7 +184,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | :---------- | :--------- | 
 | ![Screenshot](https://i.imgur.com/tKIffsk.png) | ![Screenshot](https://i.imgur.com/4RoqG2Q.png) |
 
-### Emitir extrato bancário
+## Emitir extrato bancário
 
 ```http
   GET /contas/extrato?numero_conta=123&senha=123
@@ -199,7 +199,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | :---------- | :--------- | 
 | ![Screenshot](https://i.imgur.com/wdrv5M7.png) | ![Screenshot](https://i.imgur.com/eTOiMjz.png) |
 
-## 🛠️ Rodando localmente
+# 🛠️ Rodando localmente
 
 Clone o projeto
 
