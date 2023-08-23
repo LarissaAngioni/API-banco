@@ -1,10 +1,10 @@
 
-# API Banco
+# 🏦 API Banco
 
 Esta API permite a gestão de contas bancárias, incluindo a criação de contas, transações, atualização de dados, exclusão de contas, consulta de saldo e emissão de extratos. 
 
 
-# Índice 
+## 🔍 Índice 
 
 * [Funcionalidades](#Funcionalidades)
 * [Tecnologias](#Tecnologias)
@@ -23,7 +23,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 * [Rodando localmente](#aRodando-localmente)
 
 
-## Funcionalidades
+## 💡 Funcionalidades
 
 - Criar conta bancária
 - Listar contas bancárias
@@ -36,15 +36,15 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 - Emitir extrato bancário
 
 
-## Tecnologias
+## 🖥️ Tecnologias
 
 * Javascript
 * Node
 * Express
 
-## Programas necessários
+## ⚙️ Programas necessários
 * NodeJs
-# Documentação da API
+# 📃 Documentação da API
 
 ### Lista todas as contas bancárias existentes
 
@@ -199,7 +199,7 @@ Esta API permite a gestão de contas bancárias, incluindo a criação de contas
 | :---------- | :--------- | 
 | ![Screenshot](https://i.imgur.com/wdrv5M7.png) | ![Screenshot](https://i.imgur.com/eTOiMjz.png) |
 
-## Rodando localmente
+## 🛠️ Rodando localmente
 
 Clone o projeto
 
