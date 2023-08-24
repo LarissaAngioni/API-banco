@@ -1,0 +1,316 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-08-22T13:33:37.712Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.5",
+  "resources": [
+    {
+      "_id": "req_291ca2ef0e544b0fb6afbf71403b08c4",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692653412593,
+      "created": 1692291116362,
+      "url": "http://localhost:3000/contas",
+      "name": "getContas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_784813cf2942429d9f3227c52603141e",
+          "name": "senha_banco",
+          "value": "Cubos123Bank",
+          "description": ""
+        }
+      ],
+      "headers": [{ "name": "User-Agent", "value": "Insomnia/2023.5.3" }],
+      "authentication": {},
+      "metaSortKey": -1692291116362,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "parentId": null,
+      "modified": 1692290960051,
+      "created": 1692290960051,
+      "name": "Desafio 2",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_584c9dfa1b0e4057a8f08b988f0b6c9c",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692711172332,
+      "created": 1692296756585,
+      "url": "http://localhost:3000/contas",
+      "name": "createConta",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\"nome\": \"Larissa\",\n\"cpf\": \"62086561172\",\n\"data_nascimento\": \"1998-03-25\",\n\"telefone\": \"71999998888\",\n\"email\": \"larissa@gmail.com\",\n\"senha\": \"12345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "Insomnia/2023.5.3" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692243724568,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_be61bad338c74d14add19996e79666de",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692709642784,
+      "created": 1692301040906,
+      "url": "http://localhost:3000/contas/1/usuario",
+      "name": "atualizarUser",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Ana Clara\",\n\t\"cpf\": \"03367138860\",\n\t\"data_nascimento\": \"1998-03-25\",\n\t\"telefone\": \"71999998888\",\n\t\"email\": \"anaclara@gmail.com\",\n\t\"senha\": \"12345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "Insomnia/2023.5.3" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692220028671,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fc01184dbe8a4f40bc6dde9d69dd5bc8",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692711183159,
+      "created": 1692302473401,
+      "url": "http://localhost:3000/contas/1",
+      "name": "deleteConta",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "Insomnia/2023.5.3",
+          "id": "pair_89440efca6da438fadc0054ffa203f6b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692267420465,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_67a41a0a6ae44668bcfebc1f5d73fa4c",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692664195993,
+      "created": 1692317717652,
+      "url": "http://localhost:3000/transacoes/depositar",
+      "name": "depositar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"numero_conta\": \"1\",\n\t\"valor\": 10000\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "Insomnia/2023.5.3" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692279268413.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9f6587cc537f47b1b4efb378ed99aea0",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692711079286,
+      "created": 1692320943428,
+      "url": "http://localhost:3000/transacoes/sacar",
+      "name": "sacar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"numero_conta\": \"1\",\n\t\"valor\": 1000,\n  \"senha\": \"12345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "Insomnia/2023.5.3" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692273344439.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_16b08b11022247c7813132e0f36fbc3c",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692711195358,
+      "created": 1692324627872,
+      "url": "http://localhost:3000/transacoes/transferir",
+      "name": "transferir",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"numero_conta_origem\": \"1\",\n\t\"numero_conta_destino\": \"2\",\n\t\"valor\": 2000,\n\t\"senha\": \"12345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "Insomnia/2023.5.3" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1692270382452.125,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_61bd718affe54cdba63b57c409c2e060",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692709831570,
+      "created": 1692325417814,
+      "url": "http://localhost:3000/contas/saldo",
+      "name": "saldo",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_784813cf2942429d9f3227c52603141e",
+          "name": "numero_conta",
+          "value": "1",
+          "description": ""
+        },
+        {
+          "id": "pair_c5ea1d94707f4a42a2158b6b484e5453",
+          "name": "senha",
+          "value": "12345",
+          "description": ""
+        }
+      ],
+      "headers": [{ "name": "User-Agent", "value": "Insomnia/2023.5.3" }],
+      "authentication": {},
+      "metaSortKey": -1692285192387.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_cf902ac5c561458f92ee501da79b29a3",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692710242710,
+      "created": 1692325509937,
+      "url": "http://localhost:3000/contas/extrato",
+      "name": "extrato",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_784813cf2942429d9f3227c52603141e",
+          "name": "numero_conta",
+          "value": "1",
+          "description": ""
+        },
+        {
+          "id": "pair_c5ea1d94707f4a42a2158b6b484e5453",
+          "name": "senha",
+          "value": "12345",
+          "description": ""
+        }
+      ],
+      "headers": [{ "name": "User-Agent", "value": "Insomnia/2023.5.3" }],
+      "authentication": {},
+      "metaSortKey": -1692282230400.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_d8ea99d75e1b7dc85eead576b5ef30565253bda8",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692290960053,
+      "created": 1692290960053,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1692290960053,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_d8ea99d75e1b7dc85eead576b5ef30565253bda8",
+      "parentId": "wrk_7ff94336ac5449f59af93ff493ed9ff7",
+      "modified": 1692290960055,
+      "created": 1692290960055,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
